@@ -5,10 +5,13 @@
 odoo.define("web_advanced_search.human_domain", function () {
     "use strict";
 
+    var core = require('web.core');
+    var _t = core._t;
+    
     const join_mapping = {
-        "&": _(" and "),
-        "|": _(" or "),
-        "!": _(" is not "),
+        "&": _t(" and "),
+        "|": _t(" or "),
+        "!": _t(" is not "),
     };
 
     const human_domain_methods = {
